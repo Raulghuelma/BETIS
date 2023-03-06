@@ -1978,9 +1978,9 @@ def MakeGasCube(cube_name):
                     
                 error = list(ascii.read(file_in)['col3'])
    
-                cubo.data[np.abs(ini_cubo-ini_model):np.abs(9100-int(ini_cubo)),0,int(bin_index)-1]=10**20*(np.array(data_in)-np.array(data_out))[:9100-ini_model]*ascii.read(file_,data_start=16,data_end=17)['col1']
+                cubo[np.abs(ini_cubo-ini_model):np.abs(9100-int(ini_cubo)),0,int(bin_index)-1]=10**20*(np.array(data_in)-np.array(data_out))[:9100-ini_model]*ascii.read(file_,data_start=16,data_end=17)['col1']
 
-                errores.data[np.abs(ini_cubo-ini_model):np.abs(9100-int(ini_cubo)),0,int(bin_index)-1] = 10**20*np.array(error[np.abs(ini_cubo-ini_model):np.abs(9100-int(ini_cubo))])
+                errores[np.abs(ini_cubo-ini_model):np.abs(9100-int(ini_cubo)),0,int(bin_index)-1] = 10**20*np.array(error[np.abs(ini_cubo-ini_model):np.abs(9100-int(ini_cubo))])
         
             except KeyError: 'col3' 
      
