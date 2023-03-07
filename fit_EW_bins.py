@@ -977,9 +977,9 @@ def MakeGasCube(cube_name):
         errores = fits.open('Final_Sample/'+cube_name+'/'+cube_name+'.resam.fits')[1]
         hdr=cubo.header
 
-        outs = glob.glob('Final_Sample/'+cube_name+'/adabin_out/'+cube_name+'_*.C11*')
+        outs = glob.glob('Final_Sample/'+cube_name+'/adabin_out_SII/'+cube_name+'_*.C11*')
 
-        inputs = glob.glob('Final_Sample/'+cube_name+'/adabin_out/'+cube_name+'_*.txt')
+        inputs = glob.glob('Final_Sample/'+cube_name+'/adabin_out_SII/'+cube_name+'_*.txt')
         bin_map = fits.open('Final_Sample/'+cube_name+'/seg_adabin_SNSII10.0_'+cube_name+'.fits')[0].data
 
         
