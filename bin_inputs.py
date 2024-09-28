@@ -116,11 +116,11 @@ def run_adabin(sn_min, gal):
           
           
 PARSER = argparse.ArgumentParser()
-#PARSER.add_argument('-sn', '--sn_min', type=float, default=None)
+PARSER.add_argument('-sn', '--sn_min', type=float, default=None)
 PARSER.add_argument('-g', '--gal', type=str, default=None) 
          
 if __name__ == '__main__':
     args = PARSER.parse_args()
-    run_adabin(10, args.gal)
+    run_adabin(args.sn_min, args.gal)
     elapsed = (time.time() - start_time)
     print(str(timedelta(seconds=elapsed)))
