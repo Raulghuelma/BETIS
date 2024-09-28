@@ -5,6 +5,10 @@ Sometimes it is necessary to perform adaptive binning to increase the signal-to-
 More often than not, when working with IFU data, you may want to enhance the S/N of the nebular emission lines rather than the stellar continuum 
 (see BETIS I paper: https://doi.org/10.1051/0004-6361/202348453). Here are the steps to achieve this:
 
-1. Choose your favorite emission line, for instance, [S II]6716. You can apply Equation 1 from the BETIS I paper by running the make_snr_maps.py script on your datacube. This will calculate the S/N for each spaxel and return signal, noise, and S/N maps for the [S II]6716 line. The code can be modified to change the emission line of interest and adjust the pseudo-continuum window accordingly.
+1. Choose your favorite emission line, for instance, [S II]6716. You can apply Equation 1 from the BETIS I paper by running the **make_snr_maps.py** script on your datacube. This will calculate the S/N for each spaxel and return signal, noise, and S/N maps for the [S II]6716 line. The code can be modified to change the emission line of interest and adjust the pseudo-continuum window accordingly.
 
-2. 
+2. Running **bin_inputs.py** will then bin the datacube as a function of the S/N map obtained in the first step setting a target S/N. For instance, python3 bin_inputs.py -sn 10 -g NGC863 will generate a segmentation map based on the S/N choosen in step 1 with a target of S/N([S II]) = 10, the integrated spectra (and errors) of each bin in a set of .txt files, as well as a .map file where are saved the coordinates of each bin.
+
+3. With the inputs obtained in 2, you can run STARLIGHT to perform the simple stellar popularion synthesis to the integrated spectra (see http://www.starlight.ufsc.br/downloads/ to download STARLIGHT and see documentation)
+
+4. Run 
