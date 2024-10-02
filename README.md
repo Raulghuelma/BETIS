@@ -26,3 +26,7 @@ python3 **resamp_cube.py** -z (redshift) -a (a_v) -n (survey name e.g. MUSE, MAN
 This will generate a galaxy.resam.fits file, which contains the observed datacube that has been rest-framed, resampled to 1 Å, and corrected for Milky Way extinction.
 
 If you don't want to bin the datacube, you can run **prestarcube.py** instead of **resamp_cube.py** (with the same input commands) to perform the same resampling **AND ALSO** prepare the inputs for running **STARLIGHT** spaxel-by-spaxel. Then, running **fit_emi_abs_ccorr_IFU.py** -N galaxy_name will generate a nebular emission line cube, as well as the same outputs as in step 4, but in the form of emission line maps calculated spaxel-by-spaxel.
+
+![seg_map](https://github.com/user-attachments/assets/5fc49c3b-3bc8-4610-97fe-83de852678f9)
+
+
