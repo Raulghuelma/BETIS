@@ -1,0 +1,15 @@
+19575
+./modelsnew/                           [base_dir]
+/home/raul.gonzalez/raul/STARLIGHTv04/Final_Sample/NGC863//adabin_out_SII/
+./                                     [mask_dir]
+/home/raul.gonzalez/raul/STARLIGHTv04/Final_Sample/NGC863//adabin_out_SII/
+-2007200                               [your phone number]
+5120.0                                     [llow_SN]   lower-lambda of S/N window
+5180.0                                     [lupp_SN]   upper-lambda of S/N window
+4700.0                                     [Olsyn_ini] lower-lambda for fit
+9100.0                                     [Olsyn_fin] upper-lambda for fit
+1.0                                    [Odlsyn]    delta-lambda for fit
+1.0                                    [fscale_chi2] fudge-factor for chi2
+FIT                                    [FIT/FXK] Fit or Fix kinematics
+1                                      [IsErrSpecAvailable] 1/0 = Yes/No
+1                                      [IsFlagSpecAvailable] 1/0 = Yes/No
